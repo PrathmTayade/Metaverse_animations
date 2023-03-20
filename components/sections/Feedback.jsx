@@ -28,9 +28,9 @@ const Feedback = () => (
         </div>
 
         <p className="mt-[24px] text-[18px] font-normal leading-[39.6px] text-white sm:text-[24px] sm:leading-[45.6px]">
-          “With the development of today's technology, metaverse is very useful
-          for today's work, or can be called web 3.0. by using metaverse you can
-          use it as anything”
+          “With the development of today&apos;s technology, metaverse is very
+          useful for today&apos;s work, or can be called web 3.0. by using
+          metaverse you can use it as anything”
         </p>
       </motion.div>
 
