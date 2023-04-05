@@ -10,15 +10,15 @@ const ExploreCard = ({ index, active, handleClick, id, imgUrl, title }) => {
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className={`relative ${
-        active === id ? "flex-[10] lg:flex-[3.5]" : "flex-[2] lg:flex-[0.5]"
-      } flex h-[700px] min-w-[170px] cursor-pointer items-center justify-center transition-[flex] duration-[0.7s] ease-out-flex `}
+        active === id ? "flex-[10] lg:flex-[3.5] " : "flex-[2] lg:flex-[0.5]"
+      } flex h-[700px] min-w-[170px] cursor-pointer  items-center  justify-center overflow-hidden transition-[flex] duration-[0.7s] ease-out-flex `}
       onClick={() => handleClick(id)}
     >
       <Image
         src={imgUrl}
         alt={title}
         fill
-        sizes=""
+        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 50vw, 100vw"
         className={`absolute rounded-[24px] object-cover`}
       />
       {active !== id ? (
@@ -28,12 +28,13 @@ const ExploreCard = ({ index, active, handleClick, id, imgUrl, title }) => {
       ) : (
         <div className="absolute bottom-0 flex w-full flex-col justify-start rounded-b-[24px] bg-[rgba(0,0,0,0.5)] p-8">
           <div
-            className={`${styles.flexCenter} glassmorphism mb-[16px] h-[60px] w-[60px] rounded-[24px]`}
+            className={`${styles.flexCenter} glassmorphism relative mb-[16px] h-[60px] w-[60px] rounded-[24px] `}
           >
             <Image
               src={headSet}
               alt={"headset"}
-              className={"h-1/2 w-1/2 object-contain"}
+              width={40}
+              className={"object-contain"}
             />
           </div>
           <p className="text-[16px] font-normal uppercase leading-[20.16px] text-white">

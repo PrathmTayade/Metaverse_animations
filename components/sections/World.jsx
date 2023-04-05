@@ -42,7 +42,7 @@ const World = () => (
         />
       </div>
 
-      <div className="absolute top-10 left-20 h-[70px] w-[70px] rounded-full bg-[#5D6680] p-[6px]">
+      <div className=" absolute top-10 left-20 h-[70px] w-[70px] rounded-full bg-[#5D6680] p-[6px]">
         <Image
           src="/people-02.png"
           height={500}

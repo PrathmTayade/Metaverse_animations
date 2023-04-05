@@ -18,12 +18,12 @@ const GetStarted = () => (
     >
       <motion.div
         variants={planetVariants("left")}
-        className={"flex flex-1  items-center justify-center"}
+        className={"relative flex flex-1 items-center justify-center"}
       >
         <Image
           src={planet}
           alt="get started"
-          className={" h-[90%] w-[90%]   object-contain"}
+          className={" h-[90%] w-[90%] object-contain"}
         />
       </motion.div>
       <motion.div

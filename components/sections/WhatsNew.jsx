@@ -4,7 +4,7 @@ import { fadeIn, planetVariants, staggerContainer } from "@/utils/motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { NewFeatures, TitleText, TypingText } from "..";
-import planet from "../../public/whats-new.png";
+import PlanetImg from "../../public/whats-new.png";
 
 const WhatsNew = () => (
   <section className=" xs:p-8 relative z-10 px-6 py-12 sm:p-16">
@@ -30,13 +30,11 @@ const WhatsNew = () => (
 
       <motion.div
         variants={planetVariants("right")}
-        className={"flex flex-1  items-center justify-center"}
+        className={
+          "relative flex h-[90%] w-[90%] flex-1 items-center justify-center"
+        }
       >
-        <Image
-          src={planet}
-          alt="get started"
-          className={" h-[90%] w-[90%]   object-contain"}
-        />
+        <Image src={PlanetImg} alt="whats new" className={" object-contain"} />
       </motion.div>
     </motion.div>
   </section>

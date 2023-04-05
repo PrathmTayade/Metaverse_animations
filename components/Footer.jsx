@@ -25,13 +25,15 @@ const Footer = () => (
             alert("You are now entering the world of metaverse");
           }}
         >
-          <Image
-            src={headset}
-            alt="headset"
-            width={24}
-            height={24}
-            className="object-contain"
-          />
+          <div className="relative h-[24px] w-[24px] ">
+            <Image
+              src={headset}
+              alt="headset"
+              fill
+              className="object-contain"
+            />
+          </div>
+
           <span className="text-[16px] font-normal text-white">
             Enter Metaverse
           </span>

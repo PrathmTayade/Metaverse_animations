@@ -5,8 +5,8 @@ import { slideIn, staggerContainer, textVariant } from "@/utils/motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import cover from "../../public/cover.png";
 import stampImg from "../../public/stamp.png";
+import cover from "../../public/cover.png";
 
 const Hero = () => (
   <section className={`${styles.yPaddings} pl-6 sm:pl-16`}>
@@ -43,12 +43,15 @@ const Hero = () => (
         className="relative -mt-[12px] w-full md:-mt-[20px]"
       >
         <div className="hero-gradient absolute -top-[30px] z-[0] h-[300px] w-full rounded-tl-[140px]" />
-
-        <Image
-          src={cover}
-          alt="hero_cover"
-          className="relative z-10 h-[350px] w-full rounded-tl-[140px] object-cover sm:h-[500px]"
-        />
+        <div className=" relative z-10 h-[350px] w-full rounded-tl-[140px]  sm:h-[500px]">
+          <Image
+            src={cover}
+            alt="hero_cover"
+            fill
+            priority
+            className="rounded-tl-[140px] object-cover"
+          />
+        </div>
 
         <Link href="#explore">
           <div className="relative z-10 -mt-[50px] flex w-full justify-end pr-[40px] sm:-mt-[70px]">
